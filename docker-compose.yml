@@ -1,0 +1,12 @@
+version: "3"
+services:
+  api:
+    container_name: api
+    image: node:13
+    working_dir: /api
+    volumes:
+      - .:/api
+    command: bash -c "npm install && npm start"
+    ports:
+      - "8080:80"
+      - "9229:9229"
